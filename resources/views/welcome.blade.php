@@ -1,95 +1,320 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
+        <title>Pixivent cover</title>
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/26fdcedf55.js"></script>
+        
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/landing-page.css">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+        <!--    ***** Header Area start *****-->
+        <header class="header_area fixed-top">
+            <div class="container-fluid" style="width: 100% !important;">
+                <div class="row">
+                    <!-- Menu Area Start -->
+                    <div class="col-12">
+                        <div class="menu_area py-2">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <!-- Logo -->
+                                <img src="img/logo-survey.png" class="img-fluid logo-width">
+                                <button class="navbar-toggler" style="outline: none;" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                <!-- Menu Area -->
+                                <div class="collapse navbar-collapse" id="ca-navbar">
+                                    <ul class="navbar-nav ml-auto" id="nav">
+                                        <li class="nav-item"><a href="#home" class="nav-link menu-item">Trang chủ</a></li>
+                                        <li class="nav-item"><a href="#services" class="nav-link menu-item">Dịch vụ</a></li>
+                                        <li class="nav-item"><a href="#news" class="nav-link menu-item">Tin tức</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
+        <!-- ***** Wellcome Area Start ***** --->
+        <section class="wellcome_area clearfix typewriter" id="home">
+            <div class="container-fluid h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-md mt-5">
+                        <div class="wellcome-heading">
+                            <h2 class="letter-spacing">Bộ phận Số liệu &amp; Khảo sát Nhân sự</h2>
+                            <h3>CÔNG TY CỔ PHẦN ĐẦU TƯ GINEX</h3>
+                        </div>
+                        <a href="http://salary-survey.ginex.com.vn" target="_blank" class="btn submit-btn" style="width: 23% !important;"><i class="fas fa-arrow-right"></i> Khảo sát lương</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <!-- ***** Wellcome Area End ***** --->
+        <!-- ***** Services ***** -->
+        <section class="bg-grey" id="services">
+            <div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="section-heading">
+                                <h1 class="bg-font-style">Our Services</h1>
+                                <h2>Dịch vụ của chúng tôi</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-12 text-center image-hover">
+                            <div class="row">
+                                <div class="col-md-6 col-12 mb-4">
+                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                        <div class="card-content">
+                                            <img src="./img/bg-img/2019-salary-survey.jpg" alt="" class="card-img-top img-fluid">
+                                            <div class="card-body">
+                                                <h4>Khảo sát lương 2019</h4>
+                                                <a href="#" target="_blank" class="btn submit-btn ml-auto small-btn px-3">&rarr; Đăng ký tham gia</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 mb-4">
+                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                        <div class="card-content">
+                                            <img src="./img/bg-img/workers.jpg" alt="" class="card-img-top img-fluid">
+                                            <div class="card-body">
+                                                <h4>Khảo sát nhu cầu người lao động</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 mb-4 mb-md-0">
+                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                        <div class="card-content">
+                                            <img src="./img/bg-img/jobs.jpg" alt="" class="card-img-top img-fluid">
+                                            <div class="card-body">
+                                                <h4>Ứng viên gửi CV tìm cơ hội việc làm</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 mb-4 mb-md-0">
+                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                        <div class="card-content">
+                                            <img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid">
+                                            <div class="card-body">
+                                                <h4>Khảo sát nhu cầu đào tạo &amp; hội thảo</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 text-center text-white" style="">
+                            <div class="card h-100">
+                                <div class="card-content" style="min-height: 400px;">
+                                    <div class="card-img-overlay overlay-blue d-flex align-items-center p-4 justify-content-center">
+                                        <div>
+                                            <h4 class="text-white">Thông tin các khóa đào tạo 2019</h4>
+                                            <hr>
+                                            <a href="#" class="btn submit-btn">&rarr; Đăng ký tham gia</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** End Services ***** -->
+        <!-- ***** News ***** -->
+        <section class="bg-grey p-150 pb-0" id="news">
+            <div>
+                <img src="img/bg-img/bg-3.png" alt="" class="position-absolute opacity-1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 col-12 mb-4 mb-md-0 h-100" style="">
+                            <div class="card border-0">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h4 class="block-title"><span>Tin tức &amp; sự kiện</span></h4>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Lorem ipsum dolor sit amet consectet
+                                        </li>
+                                        <li class="list-group-item">
+                                            Lorem ipsum dolor sit amet consectet
+                                        </li>
+                                        <li class="list-group-item">
+                                            Lorem ipsum dolor sit amet consectet
+                                        </li>
+                                        <li class="list-group-item">
+                                            Lorem ipsum dolor sit amet consectet
+                                        </li>
+                                        <li class="list-group-item">
+                                            Lorem ipsum dolor sit amet consectet
+                                        </li>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <a href="#" class="btn submit-btn small-btn">Xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 mb-4 mb-md-0 h-100" style="">
+                            <div class="card border-0">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h4 class="block-title"><span>Tuyển dụng</span></h4>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Cras justo odio facilisis in cónectetur
+                                        </li>
+                                        <li class="list-group-item">
+                                            Cras justo odio facilisis in cónectetur
+                                        </li>
+                                        <li class="list-group-item">
+                                            Cras justo odio facilisis in cónectetur
+                                        </li>
+                                        <li class="list-group-item">
+                                            Cras justo odio facilisis in cónectetur
+                                        </li>
+                                        <li class="list-group-item">
+                                            Cras justo odio facilisis in cónectetur
+                                        </li>
+
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <a href="#" class="btn submit-btn small-btn">Xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 mb-4 mb-md-0 h-100" style="">
+                            <div class="card border-0">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h4 class="block-title"><span>Cộng đồng nhân sự</span></h4>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Dapibus ac facilisis in porta ac cónec
+                                        </li> 
+                                        <li class="list-group-item">
+                                            Dapibus ac facilisis in porta ac cónec
+                                        </li>
+                                        <li class="list-group-item">
+                                            Dapibus ac facilisis in porta ac cónec
+                                        </li> 
+                                        <li class="list-group-item">
+                                            Dapibus ac facilisis in porta ac cónec
+                                        </li> 
+                                        <li class="list-group-item">
+                                            Dapibus ac facilisis in porta ac cónec
+                                        </li>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <a href="#" class="btn submit-btn small-btn">Xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** End News ***** -->
+        <!-- ***** Section partner ***** -->
+        <section class="bg-grey p-150 text-center pt-0">
+            <div class="container-fluid">
+                <div class="row gallery">
+                    <div class="col-12 text-center">
+                        <div class="section-heading">
+                            <h1 class="bg-font-style">Our partners</h1>
+                            <h2>Đối tác của chúng tôi</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/1.png" alt="" class="img-fluid img-thumbnail">
+                    </div>                    
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/2.png" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/3.jpg" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/4.png" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/5.jpg" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
+                        <img src="./img/partner/6.jpg" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="p-50">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-12">
+                        <h5 class="mb-4 font-weight-bold text-white footer-block-title"><span>Về chúng tôi</span></h5>
+                        <ul class="m-0">
+                            <li><h6 class="text-white mb-0">CÔNG TY CỔ PHẦN ĐẦU TƯ GINEX</h6></li>
+                            <li><i class="fas fa-check"></i>&nbsp;Địa chỉ: 16/562 Nguyễn Văn Linh, Q. Lê Chân, Hải Phòng</li>
+                            <li><i class="fas fa-check"></i>&nbsp;MST: 0201641412</li>
+                            <li><i class="fas fa-check"></i>&nbsp;Điện thoại: 02253.785.886 </li>
+                            <li><i class="fas fa-check"></i>&nbsp;Email:  khaosatnhansu@ginex.com.vn</li>
+                            <li><i class="fas fa-check"></i>&nbsp;Website: <a href="www.ginex.com.vn" target="_blank" class="text-info">www.ginex.com.vn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-12 p-relative">
+                        <h5 class="mb-4 font-weight-bold text-white footer-block-title"><span>Mục tiêu của chúng tôi</span></h5>
+                        <div>
+                            <p class="lead font-italc mission">&quot;&nbsp;Hỗ trợ các nhà quản trị nhân sự & lãnh đạo các doanh nghiệp có được cơ sở dữ liệu đáng tin cậy về thị trường lao động để hoạch định chính sách nhân sự một cách phù hợp nhằm giữ chân, thu hút & phát triển nhân tài cho tổ chức của mình&nbsp;&quot;</p>
+                        </div>
+                        <small class="text-warning float-right" style="position: absolute; bottom: 4px; right: 0px;">Copyright &copy;2019 by Ginex. All rights reserved.</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-white" id="exampleModalCenterTitle">Khảo sát lương 2020</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <p></p>
+                            <p class="text-center">
+                            <i class="fas fa-bell fa-4x text-danger"></i>
+                            </p>
+                        </div>
+                
+                        <div class="col-9">
+                            <p>Xin lỗi, chúng tôi đang phát triển chương trình Khảo sát tiền lương và các nội dung liên quan, website chưa được hoàn thiện, xin lỗi bạn vì sự bất tiện!</p>
+                            <p>
+                            <small class="font-italic text-danger"><i class="fas fa-haykal"></i>&nbsp;Đây là bản giao diện để ACE tham khảo. Chúng tôi chính thức triển khai dịch vụ Khảo sát tiền lương 2020 kể từ ngày 1/1/2020</small>
+                            </p>
+                
+                        </div>
+                    </div>     
+                </div>
                 </div>
             </div>
         </div>
+        <script src="/js/app.js"></script>
     </body>
 </html>

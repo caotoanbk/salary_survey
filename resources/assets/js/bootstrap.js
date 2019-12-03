@@ -1,11 +1,17 @@
-
 window._ = require('lodash');
 
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap-sass');
+    require('bootstrap/dist/js/bootstrap.bundle');
 } catch (e) {}
+
+const WOW = require('wowjs')
+window.wow = new WOW.WOW({
+    live: false
+})
+
+require('magnific-popup')
 
 
 window.axios = require('axios');
